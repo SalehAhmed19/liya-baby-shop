@@ -16,6 +16,10 @@ npx tailwindcss init
 ```
 npm i daisyui
 ``` 
+- SwiperJs
+```
+npm i swiper
+```
 ### Framework (Backend):
 - NodeJs
 ```
