@@ -18,16 +18,19 @@ const NavLinks = () => {
               }}
             >
               {link.name}
-              <span className="text-xl md:hidden inline">
+              <span className="text-xl md:hidden inline hover:text-red-300">
                 {heading === link.name ? (
-                  <RiArrowDropUpLine />
+                  <span>
+                    <RiArrowDropUpLine />
+                  </span>
                 ) : (
                   <RiArrowDropDownLine />
                 )}
               </span>
-              <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
-                <RiArrowDropDownLine />
-                <ion-icon name="chevron-down"></ion-icon>
+              <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2 duration-300">
+                <span >
+                  <RiArrowDropDownLine />
+                </span>
               </span>
             </h3>
             {link.submenu && (
@@ -39,9 +42,9 @@ const NavLinks = () => {
                     mt-1 bg-white rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-white p-5 grid grid-cols-3 gap-10">
+                  <div className="bg-purple-100 p-5 grid grid-cols-3 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
-                      <div>
+                      <div >
                         <h3 className="text-lg font-semibold">
                           {mysublinks.Head}
                         </h3>
@@ -82,7 +85,7 @@ const NavLinks = () => {
                   >
                     {slinks.Head}
 
-                    <span className="text-xl md:mt-1 md:ml-2 inline">
+                    <span className="text-xl md:mt-1 md:ml-2 inline ">
                       {subHeading === slinks.Head ? (
                         <RiArrowDropUpLine />
                       ) : (
