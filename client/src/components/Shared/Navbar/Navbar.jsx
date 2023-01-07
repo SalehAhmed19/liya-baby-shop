@@ -1,87 +1,52 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { BiArrowToBottom } from "react-icons/bi";
+import { MdCancel } from "react-icons/md";
+import NavLinks from "./NavLinks";
+import { AiOutlineMenu } from "react-icons/ai";
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <a className="justify-between">
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
-        </div>
-        <a className="btn btn-ghost normal-case text-xl">Liya baby shop</a>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <div className="flex ml-4">
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered"
-            />
+    <nav className="bg-white">
+      <div className="flex items-center font-medium justify-around">
+        <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+          <p>liya baby shop</p>
+          <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
+            {open ? (
+              <MdCancel />
+            ) : (
+              <AiOutlineMenu
+                
+              ></AiOutlineMenu>
+            )}
           </div>
         </div>
-      </div>
-      <div className=" border ">
-        <ul className="p-2 flex justify-between ">
-          <li className="pl-2">
-            <a>Login</a>
+        <ul className="md:flex hidden z-20 uppercase items-center gap-8 font-[Poppins]">
+          <li>
+            <Link to="/" className="py-7 px-3 inline-block">
+              Home
+            </Link>
           </li>
-          <li className="pl-2">
-            <a>cart</a>
+          <NavLinks />
+        </ul>
+        <div className="md:block hidden">{/* <Button /> */}</div>
+        {/* Mobile nav */}
+        <ul
+          className={`
+        md:hidden bg-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
+        duration-500 ${open ? "left-0" : "left-[-100%]"}
+         z-20`}
+        >
+          <li>
+            <Link to="/" className="py-7 px-3 inline-block">
+              Home
+            </Link>
           </li>
-          <li className="pl-2">
-            <a>wishlist</a>
-          </li>
+          <NavLinks />
+          <div className="py-5">{/* <Button /> */}</div>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

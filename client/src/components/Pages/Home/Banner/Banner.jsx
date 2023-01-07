@@ -30,7 +30,7 @@ const BannerData = [
 ];
 const Banner = () => {
   return (
-    <>
+    <div className="">
       <Swiper
         cssMode={true}
         navigation={true}
@@ -46,7 +46,7 @@ const Banner = () => {
         
         
       </Swiper>
-    </>
+    </div>
   );
 };
 
