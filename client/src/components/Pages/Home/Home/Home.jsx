@@ -8,14 +8,13 @@ import RecomendsProduct from "../RecomendsProduct/RecomendsProduct";
 
 const Home = () => {
   return (
-    <>
-      <Navbar />
+    <div>
       <Banner />
       <Products />
       <RecomendsProduct />
       <Brands />
-      <Blogs/>
-    </>
+      <Blogs />
+    </div>
   );
 };
 

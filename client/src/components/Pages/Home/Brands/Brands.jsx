@@ -4,7 +4,8 @@ import HomeTitle from "../Home/HomeTitle";
 const Brands = () => {
   return (
     <div>
-     <HomeTitle title="recent blog posts"/>
+     <HomeTitle title="brands we love"/>
+     
     </div>
   );
 };

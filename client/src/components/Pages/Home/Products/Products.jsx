@@ -90,7 +90,7 @@ const ProductsDataCategory = [
 const Products = () => {
   return (
     <>
-      <div className="container">
+      <div className="container mx-auto">
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
@@ -112,7 +112,7 @@ const Products = () => {
         </Swiper>
       </div>
 
-      <div className="container">
+      <div className="container mx-auto">
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
