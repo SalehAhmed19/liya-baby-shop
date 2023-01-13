@@ -7,10 +7,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-white">
+    <nav className="bg-mongoose">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <p>liya baby shop</p>
+          <p className="text-[white]">liya baby shop</p>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? (
               <MdCancel />
@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
         <ul className="md:flex hidden z-20 uppercase items-center gap-8 font-[Poppins]">
           <li>
-            <Link to="/" className="py-7 px-3 inline-block">
+            <Link to="/" className="py-7 px-3 inline-block text-[white]">
               Home
             </Link>
           </li>
