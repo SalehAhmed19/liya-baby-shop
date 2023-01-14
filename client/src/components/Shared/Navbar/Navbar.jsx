@@ -12,13 +12,7 @@ const Navbar = () => {
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
           <p className="text-[white]">liya baby shop</p>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
-            {open ? (
-              <MdCancel />
-            ) : (
-              <AiOutlineMenu
-                
-              ></AiOutlineMenu>
-            )}
+            {open ? <MdCancel /> : <AiOutlineMenu></AiOutlineMenu>}
           </div>
         </div>
         <ul className="md:flex hidden z-20 uppercase items-center gap-8 font-[Poppins]">
