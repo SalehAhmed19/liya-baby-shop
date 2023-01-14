@@ -1,0 +1,20 @@
+.loginButton{
+    background-color: #2296be;
+    padding: 12px 120px;
+    border-radius: 50px;
+    color: #fff;
+}
+.loginButton:hover{
+    background-color: #fff;
+    color: #2296be;
+    border: 1px solid #2296be;
+    transition: ease 0.2s;
+}
+.googleBtn{
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    display: block;
+    width: 320px;
+    padding: 12px;
+}

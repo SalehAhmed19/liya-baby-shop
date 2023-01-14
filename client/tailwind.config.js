@@ -6,7 +6,7 @@ module.exports = {
       birch: "#393823",
       spicyMix: " #905f49",
       softPeach: " #f8f1f1",
-      mongoose: "#bc9c7d",
+      mongoose: "#2296be",
       muddyWaters: "#b5935b",
       naturalGray: "#959493",
       akaroa: "#d1bca0",
