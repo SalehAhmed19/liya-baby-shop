@@ -1,7 +1,7 @@
 .loginButton{
     background-color: #2296be;
     padding: 12px 120px;
-    border-radius: 50px;
+    border-radius: 7px;
     color: #fff;
 }
 .loginButton:hover{
@@ -13,7 +13,7 @@
 .googleBtn{
     background-color: #000;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 7px;
     display: block;
     width: 320px;
     padding: 12px;

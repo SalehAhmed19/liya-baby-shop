@@ -3,69 +3,44 @@ import "../../../../CSS/Login.css";
 
 const Login = () => {
   return (
-    <div>
-      <div className="hero min-h-screen bg-white">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold" style={{ color: "#2296be" }}>
-              Please Login
-            </h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+    <div className="lg:w-1/2 lg:mx-auto mx-3 my-10">
+      <h2 className="text-3xl">Welcome</h2>
+      <h4 className="text-xl my-5">Login</h4>
+      <div>
+        <form action="">
+          <div>
+            <input
+              type="text"
+              disabled
+              value="+880"
+              className="lg:input input-sm lg:w-20 w-16"
+            />
+            <input
+              type="text"
+              placeholder="Enter your phone number"
+              className="input input-bordered lg:input-md input-sm lg:w-full lg:max-w-xs text-xs"
+            />
+            <button className="btn lg:btn-md btn-sm px-10 ml-2">Get OTP</button>
           </div>
-          <div className="card flex-shrink-0 w-full shadow-md max-w-sm bg-base-100">
-            <div className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  style={{ border: "1px solid #2296be" }}
-                  type="text"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  style={{ border: "1px solid #2296be" }}
-                  type="text"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="loginButton">Login</button>
-                <p>
-                  <small>
-                    New to Liya Baby Shop?{" "}
-                    <span
-                      style={{ color: "#2296be" }}
-                      className="link link-hover"
-                    >
-                      <a href="#">Register Now</a>
-                    </span>
-                  </small>
-                </p>
-                <div className="divider w-1/2 mx-auto"></div>
-                <div>
-                  <button className="googleBtn">Continue with Google</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        </form>
+        <div>
+          <p>
+            <small>
+              By continuing, you agree to Liya Baby Shop{" "}
+              <span className="link" style={{ color: "#2096BE" }}>
+                Terms
+              </span>{" "}
+              of Use and{" "}
+              <span className="link" style={{ color: "#2096BE" }}>
+                Privacy Policy
+              </span>
+              .
+            </small>
+          </p>
         </div>
+        <div className="divider">or login using</div>
+        <button className="googleBtn my-5 mx-auto">Continue with Google</button>
+        <button className="googleBtn mx-auto">Continue with Facebook</button>
       </div>
     </div>
   );
