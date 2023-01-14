@@ -9,7 +9,7 @@ const NavLinks = () => {
     <>
       {links.map((link) => (
         <div>
-          <div className="px-3 text-left md:cursor-pointer group">
+          <div className="px-3 text-left md:cursor-pointer group text-[white]">
             <h3
               className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
@@ -39,20 +39,20 @@ const NavLinks = () => {
                   <div className="py-3">
                     <div
                       className="w-4 h-4 left-3 absolute 
-                    mt-1 bg-white rotate-45"
+                    mt-1 bg-softPeach rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-purple-100 p-5 grid grid-cols-3 gap-10 ">
+                  <div className="bg-softPeach p-5 grid grid-cols-3 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
                       <div >
-                        <h3 className="text-lg font-semibold">
+                        <h3 className="text-lg font-semibold text-mongoose">
                           {mysublinks.Head}
                         </h3>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-gray-600 my-2.5">
+                          <li className="text-sm text-naturalGray hover:translate-x-2 duration-500 my-2.5">
                             <Link
                               to={slink.link}
-                              className="hover:text-primary"
+                              className="hover:text-tradewind"
                             >
                               {slink.name}
                             </Link>

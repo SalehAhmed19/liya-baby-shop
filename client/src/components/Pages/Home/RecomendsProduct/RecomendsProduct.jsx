@@ -64,7 +64,7 @@ const RecommendsProduct = [
 
 const RecomendsProduct = () => {
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto bg-softPeach ">
       <HomeTitle title="Amala Earth Recommends" />
 
       <div>
@@ -83,9 +83,9 @@ const RecomendsProduct = () => {
         >
           {RecommendsProduct.map((data) => (
             <SwiperSlide>
-              <div className="card border-2 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                  <img src={data?.img} alt="Shoes" className="rounded-xl" />
+              <div className="card border-x-akaroa  bg-base-100 shadow-xl">
+                <figure className="w-100 p-3 ">
+                  <img  src={data?.img} alt="Shoes" className="rounded-xl" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{data?.title}</h2>
@@ -125,7 +125,7 @@ const RecomendsProduct = () => {
                     <span className="text-2xl">
                       <AiOutlineHeart />
                     </span>
-                    <button className="btn btn-primary capitalize">
+                    <button className="border px-8 py-2 hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
                       add to cart
                     </button>
                   </div>
