@@ -85,7 +85,7 @@ const RecomendsProduct = () => {
             <SwiperSlide>
               <div className="card border-x-akaroa  bg-base-100 shadow-xl">
                 <figure className="w-100 p-3 ">
-                  <img  src={data?.img} alt="Shoes" className="rounded-xl" />
+                  <img src={data?.img} alt="Shoes" className="rounded-xl" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{data?.title}</h2>
