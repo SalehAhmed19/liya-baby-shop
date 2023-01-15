@@ -8,6 +8,7 @@ import Faq from "../Faq/Faq";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import Products from "../Products/Products";
 import RecomendsProduct from "../RecomendsProduct/RecomendsProduct";
+import Card2 from "./Card2";
 
 const Home = () => {
   return (
@@ -15,6 +16,11 @@ const Home = () => {
       <Banner />
       <Products />
       <RecomendsProduct />
+      <Card2
+        title="Purposeful Gifts"
+        description="Unique, thoughtful and handmade products ideal for every occasion."
+        btnContent="see more products"
+      />
       <Brands />
       <Blogs />
       <About />
