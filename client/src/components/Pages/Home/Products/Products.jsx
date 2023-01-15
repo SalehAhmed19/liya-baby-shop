@@ -1,14 +1,6 @@
 import React from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-// import required modules
-import { Pagination, Navigation } from "swiper";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 const ProductsData = [
   {
@@ -87,57 +79,69 @@ const ProductsDataCategory = [
     title: "description",
   },
 ];
-const Products = () => {
+
+export const Products = () => {
+  const [sliderRef] = useKeenSlider({
+    breakpoints: {
+      "(min-width: 400px)": {
+        slides: { perView: 3, spacing: 5 },
+      },
+      "(min-width: 1000px)": {
+        slides: { perView: 5, spacing: 10 },
+      },
+    },
+    slides: { perView: 1 },
+  });
   return (
     <>
       <div className="container mx-auto">
-        <Swiper
-          slidesPerView={5}
-          spaceBetween={30}
-          slidesPerGroup={3}
-          loop={true}
-          loopFillGroupWithBlank={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {ProductsData.map((data) => (
-            <SwiperSlide>
-              <img src={data.img} alt="" />
-            </SwiperSlide>
+        <div ref={sliderRef} className="keen-slider">
+          {ProductsData.map((product) => (
+            <div className="keen-slider__slide ">
+              <div>
+                <img src={product.img} alt="" />
+              </div>
+            </div>
           ))}
-        </Swiper>
+        </div>
+        </div>
+        <div className="container mx-auto">
+        <div ref={sliderRef} className="keen-slider">
+          {ProductsDataCategory.map((product) => (
+            <div className="keen-slider__slide ">
+              <div>
+                <img src={product.img} alt="" />
+                <p className="text-center p-1">{product.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="container mx-auto">
-        <Swiper
-          slidesPerView={5}
-          spaceBetween={30}
-          slidesPerGroup={3}
-          loop={true}
-          loopFillGroupWithBlank={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {ProductsDataCategory.map((data) => (
-            <SwiperSlide>
-              <div>
-                <img src={data.img} alt="" />
-                <p className="text-center p-1">{data.title}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <div className="container mx-auto"></div>
     </>
   );
 };
 
 export default Products;
+
+function Arrow(props) {
+  const disabeld = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
+  );
+}
