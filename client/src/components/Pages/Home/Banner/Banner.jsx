@@ -3,14 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../Brands/style.css";
 
-const AdaptiveHeight = (slider) => {
-  function updateHeight() {
-    slider.container.style.height =
-      slider.slides[slider.track.details.rel].offsetHeight + "px";
-  }
-  slider.on("created", updateHeight);
-  slider.on("slideChanged", updateHeight);
-};
+
 
 const BannerData = [
   {
