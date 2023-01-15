@@ -114,10 +114,10 @@ const RecomendsProduct = () => {
                 <p className="text-xs lg:text-xl md:text-lg">{data?.price}</p>
 
                 <div className="flex items-center justify-center">
-                  <span className="lg:text-3xl text-xl lg:mr-4  mr-3">
+                  <span className="lg:text-3xl text-xl lg:mr-4 mr-3">
                     <AiOutlineHeart />
                   </span>
-                  <button className="border lg:px-8 lg:py-2 md:px-4 md:py-1 px-2 py-1  text-xs lg:text-lg md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
+                  <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
                     add to cart
                   </button>
                 </div>
