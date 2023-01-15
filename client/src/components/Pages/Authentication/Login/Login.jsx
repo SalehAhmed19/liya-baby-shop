@@ -1,30 +1,36 @@
 import React from "react";
 import "../../../../CSS/Login.css";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 
 const Login = () => {
   return (
     <div className="lg:w-1/2 lg:mx-auto mx-3 my-10">
-      <h2 className="text-3xl">Welcome</h2>
-      <h4 className="text-xl my-5">Login</h4>
-      <div>
-        <form action="">
-          <div>
-            <input
-              type="text"
-              disabled
-              value="+880"
-              className="lg:input input-sm lg:w-20 w-16"
-            />
-            <input
-              type="text"
-              placeholder="Enter your phone number"
-              className="input input-bordered lg:input-md input-sm lg:w-full lg:max-w-xs text-xs"
-            />
-            <button className="btn lg:btn-md btn-sm px-10 ml-2">Get OTP</button>
+      <h2 className="lg:text-3xl text-2xl font-semibold text-center">
+        Welcome to <br /> Liya baby Shop
+      </h2>
+      <h4 className="text-xl my-5 text-center">Login</h4>
+      <div className="">
+        <div className=" w-80 lg:w-96 mx-auto">
+          <div className="form-control">
+            <div className="input-group">
+              <input type="text" disabled value="+880" className="w-16" />
+              <input
+                type="text"
+                placeholder="Enter your number"
+                className="input input-bordered w-60"
+              />
+              <button
+                style={{ color: "#fff" }}
+                className="btn btn-primary btn-square w-20"
+              >
+                Get OTP
+              </button>
+            </div>
           </div>
-        </form>
+        </div>
         <div>
-          <p>
+          <p className="text-center mt-2">
             <small>
               By continuing, you agree to Liya Baby Shop{" "}
               <span className="link" style={{ color: "#2096BE" }}>
@@ -39,8 +45,21 @@ const Login = () => {
           </p>
         </div>
         <div className="divider">or login using</div>
-        <button className="googleBtn my-5 mx-auto">Continue with Google</button>
-        <button className="googleBtn mx-auto">Continue with Facebook</button>
+        <button className="googleBtn my-5 mx-auto">
+          <span className="flex justify-center">
+            <FcGoogle className="text-2xl mr-3" />{" "}
+            <span>Continue with Google</span>
+          </span>
+        </button>
+        <button className="googleBtn mx-auto">
+          <span className="flex justify-center">
+            <FaFacebook
+              className="text-2xl mr-3"
+              style={{ color: "#047AE9" }}
+            />
+            <span>Continue with Facebook</span>
+          </span>
+        </button>
       </div>
     </div>
   );
