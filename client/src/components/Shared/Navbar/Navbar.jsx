@@ -4,13 +4,14 @@ import { BiArrowToBottom } from "react-icons/bi";
 import { MdCancel } from "react-icons/md";
 import NavLinks from "./NavLinks";
 import { AiOutlineMenu } from "react-icons/ai";
+import logo from "../../../Assets/icon/Liya Baby Shop-3.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="bg-mongoose">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <p className="text-[white]">liya baby shop</p>
+          <img src={logo} alt="" />
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? <MdCancel /> : <AiOutlineMenu></AiOutlineMenu>}
           </div>

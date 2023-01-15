@@ -11,10 +11,17 @@
     transition: ease 0.2s;
 }
 .googleBtn{
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #2296be;
     border-radius: 7px;
     display: block;
     width: 320px;
     padding: 12px;
+}
+.otpBtn{
+    background-color: #2296be;
+    color: #fff;
+    padding: 11px;
+    border-radius: 7px;
 }
