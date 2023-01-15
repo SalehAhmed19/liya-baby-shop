@@ -5,13 +5,15 @@ import { FaFacebook } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="lg:w-1/2 lg:mx-auto mx-3 my-10">
+    <div className="flex flex-col justify-center items-center my-10">
+      {/* lg:w-1/2 lg:mx-auto mx-3  */}
       <h2 className="lg:text-3xl text-2xl font-semibold text-center">
         Welcome to <br /> Liya baby Shop
       </h2>
       <h4 className="text-xl my-5 text-center">Login</h4>
       <div className="">
-        <div className=" w-80 lg:w-96 mx-auto">
+        <div className=" ">
+          {/* w-80 lg:w-96 mx-auto */}
           <div className="form-control">
             <div className="input-group">
               <input type="text" disabled value="+880" className="w-16" />
@@ -30,7 +32,7 @@ const Login = () => {
           </div>
         </div>
         <div>
-          <p className="text-center mt-2">
+          <p className="text-center mt-2 mx-3">
             <small>
               By continuing, you agree to Liya Baby Shop{" "}
               <span className="link" style={{ color: "#2096BE" }}>
