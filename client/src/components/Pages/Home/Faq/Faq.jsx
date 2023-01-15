@@ -1,6 +1,27 @@
 import React from "react";
+import FaqQuestion from "./FaqQuestion";
 
 const Faq = () => {
+  const data = [
+    {
+      _id: 1,
+      question: "What do we stand for?",
+      answer:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus est quia at nesciunt distinctio error quis illum ratione, doloribus ab quidem qui necessitatibus, facere vero. Ipsam veniam recusandae voluptatem placeat.",
+    },
+    {
+      _id: 2,
+      question: "Our Ethos",
+      answer:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus est quia at nesciunt distinctio error quis illum ratione, doloribus ab quidem qui necessitatibus, facere vero. Ipsam veniam recusandae voluptatem placeat.",
+    },
+    {
+      _id: 3,
+      question: "The three pillars of Liya Baby Shop",
+      answer:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus est quia at nesciunt distinctio error quis illum ratione, doloribus ab quidem qui necessitatibus, facere vero. Ipsam veniam recusandae voluptatem placeat.",
+    },
+  ];
   return (
     <div>
       <div className=" bg-softPeach px-8  py-8">
@@ -35,6 +56,11 @@ const Faq = () => {
             the driving force in transforming consumer behavioural patterns by
             providing alternative solutions for an earth friendly lifestyle.
           </h3>
+        </div>
+        <div className="my-5">
+          {data.map((d) => (
+            <FaqQuestion key={d._id} d={d} />
+          ))}
         </div>
       </div>
     </div>
