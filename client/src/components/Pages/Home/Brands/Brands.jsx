@@ -48,6 +48,7 @@ const Brands = () => {
   });
   return (
     <div className="container">
+      <h2 className="mb-5 font-bold">Brands We Love</h2>
       <div ref={sliderRef} className="keen-slider">
         {data.map((d) => (
           <div
