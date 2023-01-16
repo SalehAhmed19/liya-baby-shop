@@ -6,7 +6,7 @@ import img4 from "../../../Assets/images/secure.svg";
 
 const Info = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 mx-10 gap-4 my-10">
+    <div className="grid grid-cols-1 lg:grid-cols-4 mx-10 gap-4 my-20">
       <div className="flex justify-center items-center">
         <img className="mr-3 w-16" src={img1} alt="" />
         <div>

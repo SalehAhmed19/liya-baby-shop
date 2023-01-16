@@ -116,6 +116,10 @@ body {
   cursor: pointer;
 }
 
+.arrow-dark{
+  fill: #2297BF;
+}
+
 .arrow--left {
   left: 5px;
 }
@@ -132,5 +136,9 @@ body {
   .bannerImg {
     width: 300px;
     height: 150px;
+  }
+  .arrow{
+    height: 10px;
+    width: 10px;
   }
 }
