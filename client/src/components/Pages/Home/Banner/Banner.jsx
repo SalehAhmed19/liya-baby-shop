@@ -2,29 +2,38 @@ import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../Brands/style.css";
+import img1 from "../../../../Assets/images/bannerImg-01.jpg";
+import img2 from "../../../../Assets/images/bannerImg-02.jpg";
+import img3 from "../../../../Assets/images/bannerImg-03.jpg";
+import img4 from "../../../../Assets/images/bannerImg-04.jpg";
 
 const BannerData = [
   {
     id: 1,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Immunity_Banner_1920x600_1_1800x.jpg?v=1671610507",
+    img: img1,
+    content: "Best Quality Product",
   },
   {
     id: 2,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/numbers-desktop_1800x.jpg?v=1671714911",
+    img: img2,
+    content: "Best Fashion",
   },
   {
     id: 3,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/NY-offers-desktop_51df41a7-aab2-46c8-a4dd-1ec6a112f6e6_1800x.png?v=1672810437",
+    img: img3,
+    content: "Reasonable price",
   },
   {
     id: 4,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Home_Banner_1920x600_1_1800x.jpg?v=1671263804",
+    img: img4,
+    content: "20% off!",
   },
 ];
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
+    loop: true,
     initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -38,12 +47,30 @@ const Banner = () => {
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
           {BannerData.map((data) => (
-            <img
-              alt="bannerImage"
-              src={data.img}
-              key={data.id}
-              className="keen-slider__slide number-slide1 bannerImg"
-            />
+            // <img
+            //   alt="bannerImage"
+            //   src={data.img}
+            //   key={data.id}
+            //   className="keen-slider__slide bannerImg"
+            // />
+            <>
+              <div
+                className="keen-slider__slide h-96 flex flex-col items-center justify-center"
+                style={{
+                  background: `url(${data.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  // objectFit: "contain",
+                }}
+              >
+                <h1 className="font-bold text-[#fff] text-3xl lg:text-5xl mx-20 text-center">
+                  Liya Baby Shop
+                </h1>
+                <p className="text-center text-[#fff] font-semibold my-5 text-xl">
+                  {data.content}
+                </p>
+              </div>
+            </>
           ))}
         </div>
         {loaded && instanceRef.current && (
