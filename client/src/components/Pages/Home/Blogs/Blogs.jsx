@@ -1,24 +1,25 @@
 import React from "react";
 import HomeTitle from "../Home/HomeTitle";
+import img from "../../../../Assets/categories/toys.jpg";
 
 const BlogData = [
   {
     id: 1,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/articles/1_600x.jpg?v=1672999314",
+    img: img,
     title: "Earth-friendly Recommendations According to Your Zodiac Sign",
     description:
       "Your zodiac sign or sun sign as it is sometimes referred to reveals a lot about your personality. Fire signs are usually more flamboyant and robust...",
   },
   {
     id: 2,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/articles/1_600x.jpg?v=1672999314",
+    img: img,
     title: "Earth-friendly Recommendations According to Your Zodiac Sign",
     description:
       "Your zodiac sign or sun sign as it is sometimes referred to reveals a lot about your personality. Fire signs are usually more flamboyant and robust...",
   },
   {
     id: 3,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/articles/1_600x.jpg?v=1672999314",
+    img: img,
     title: "Earth-friendly Recommendations According to Your Zodiac Sign",
     description:
       "Your zodiac sign or sun sign as it is sometimes referred to reveals a lot about your personality. Fire signs are usually more flamboyant and robust...",
@@ -37,7 +38,9 @@ const Blogs = () => {
               src={data.img}
               alt=" "
             />
-            <h2 className="py-3 hover:text-mongoose cursor-pointer duration-1000">{data.title}</h2>
+            <h2 className="py-3 hover:text-mongoose cursor-pointer duration-1000">
+              {data.title}
+            </h2>
             <h3>{data.description}</h3>
           </div>
         ))}
