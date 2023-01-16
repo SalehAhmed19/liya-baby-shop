@@ -9,6 +9,10 @@ const Footer = () => {
         <a className="link link-hover">Design</a>
         <a className="link link-hover">Marketing</a>
         <a className="link link-hover">Advertisement</a>
+        <h5 className="mt-8">
+          Developed by <br />{" "}
+          <span className="font-bold">MEHRAF All IT Solutions</span>
+        </h5>
       </div>
       <div>
         <span className="footer-title">Company</span>
