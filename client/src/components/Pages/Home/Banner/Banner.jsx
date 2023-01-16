@@ -3,8 +3,6 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../Brands/style.css";
 
-
-
 const BannerData = [
   {
     id: 1,

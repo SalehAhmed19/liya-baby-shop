@@ -104,8 +104,8 @@ export const Products = () => {
             </div>
           ))}
         </div>
-        </div>
-        <div className="container mx-auto">
+      </div>
+      <div className="container mx-auto">
         <div ref={sliderRef} className="keen-slider">
           {ProductsDataCategory.map((product) => (
             <div className="keen-slider__slide ">
