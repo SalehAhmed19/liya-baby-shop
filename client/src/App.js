@@ -5,6 +5,7 @@ import Footer from "./components/Shared/Footer/Footer";
 import Login from "./components/Pages/Authentication/Login/Login";
 import Info from "./components/Shared/Info/Info";
 import Category from "./components/Pages/Category/Categories";
+import NewsLetter from "./components/Pages/Home/NewsLetter/NewsLetter";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </main>
         <section>
           <Info />
+          <NewsLetter />
         </section>
         <footer>
           <Footer />
