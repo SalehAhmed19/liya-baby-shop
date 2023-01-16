@@ -4,51 +4,63 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./RecomendProduct.module.css";
+import dress1 from "../../../../Assets/dress/dress-1.webp";
+import dress2 from "../../../../Assets/dress/dress-2.webp";
+import dress3 from "../../../../Assets/dress/dress-3.webp";
+import dress4 from "../../../../Assets/dress/dress-4.webp";
+import dress5 from "../../../../Assets/dress/dress-5.webp";
+import dress6 from "../../../../Assets/dress/dress-6.webp";
 const RecommendsProduct = [
   {
     id: 1,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/products/TA-84-1_300x.jpg?v=1662378982",
-    title: "Scented Candles | Mango Wood | Set of 3",
+    img: dress1,
+    title:
+      "MQATZ Exquisite Embroidered Simple Fashion Kids Dress Skirt Birthday Banquet Event Party For Girls 1-5 Years Old",
     brands: "Think Artly",
     ratings: "3",
     price: "250",
   },
   {
     id: 2,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/products/TA-84-1_300x.jpg?v=1662378982",
-    title: "Scented Candles | Mango Wood | Set of 3",
+    img: dress2,
+    title:
+      "MQATZ Exquisite Embroidered Simple Fashion Kids Dress Skirt Birthday Banquet Event Party For Girls 1-5 Years Old",
     brands: "Think Artly",
     ratings: "3",
     price: "250",
   },
   {
     id: 3,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/products/TA-84-1_300x.jpg?v=1662378982",
-    title: "Scented Candles | Mango Wood | Set of 3",
+    img: dress3,
+    title:
+      "MQATZ Exquisite Embroidered Simple Fashion Kids Dress Skirt Birthday Banquet Event Party For Girls 1-5 Years Old",
     brands: "Think Artly",
     ratings: "3",
     price: "250",
   },
   {
     id: 4,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/products/TA-84-1_300x.jpg?v=1662378982",
-    title: "Scented Candles | Mango Wood | Set of 3",
+    img: dress4,
+    title:
+      "MQATZ Exquisite Embroidered Simple Fashion Kids Dress Skirt Birthday Banquet Event Party For Girls 1-5 Years Old",
     brands: "Think Artly",
     ratings: "3",
     price: "250",
   },
   {
     id: 5,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/products/TA-84-1_300x.jpg?v=1662378982",
-    title: "Scented Candles | Mango Wood | Set of 3",
+    img: dress5,
+    title:
+      "MQATZ Exquisite Embroidered Simple Fashion Kids Dress Skirt Birthday Banquet Event Party For Girls 1-5 Years Old",
     brands: "Think Artly",
     ratings: "3",
     price: "250",
   },
   {
     id: 6,
-    img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/products/TA-84-1_300x.jpg?v=1662378982",
-    title: "Scented Candles | Mango Wood | Set of 3",
+    img: dress6,
+    title:
+      "MQATZ Exquisite Embroidered Simple Fashion Kids Dress Skirt Birthday Banquet Event Party For Girls 1-5 Years Old",
     brands: "Think Artly",
     ratings: "3",
     price: "250",
@@ -90,9 +102,9 @@ const RecomendsProduct = () => {
               </figure>
               <div className="card-body py-2 px-2 lg:px-4 lg:py-3">
                 <h2 className="text-xs lg:text-xl md:text-lg font-bold">
-                  {data?.title}
+                  {data?.title.slice(0, 30) + "..."}
                 </h2>
-                <p className="text-xs lg:text-xl md:text-lg">{data?.brands}</p>
+                <p className="text-xs lg:text-lg">{data?.brands}</p>
                 <p className="">
                   <div className="rating">
                     <input

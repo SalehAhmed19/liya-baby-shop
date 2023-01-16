@@ -9,7 +9,7 @@ const NavLinks = () => {
     <>
       {links.map((link) => (
         <div>
-          <div className="px-3 text-left md:cursor-pointer group text-[white]">
+          <div className="px-3 text-left md:cursor-pointer group text-[#2096BE]">
             <h3
               className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
@@ -28,7 +28,7 @@ const NavLinks = () => {
                 )}
               </span>
               <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2 duration-300">
-                <span >
+                <span>
                   <RiArrowDropDownLine />
                 </span>
               </span>
@@ -44,7 +44,7 @@ const NavLinks = () => {
                   </div>
                   <div className="bg-softPeach p-5 grid grid-cols-3 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
-                      <div >
+                      <div>
                         <h3 className="text-lg font-semibold text-mongoose">
                           {mysublinks.Head}
                         </h3>
