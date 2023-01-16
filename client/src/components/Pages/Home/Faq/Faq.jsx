@@ -24,7 +24,7 @@ const Faq = () => {
   ];
   return (
     <div>
-      <div className=" bg-softPeach px-8  py-8">
+      <div className=" bg-[#E2F0F7] px-8  py-8">
         <h1 className="text-center my-8 text-mongoose">
           “One-stop solution for curated, eco-friendly products”
         </h1>

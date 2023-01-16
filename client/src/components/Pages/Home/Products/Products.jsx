@@ -116,8 +116,10 @@ export const Products = () => {
           {ProductsData.map((product) => (
             <div className="keen-slider__slide ">
               <div className="relative">
-                <img  src={product.img} alt="" />
-                <p className="-mt-10 absolute text-[white] font-bold">{product?.title}</p>
+                <img src={product.img} alt="" />
+                <p className="-mt-10 absolute text-[white] font-bold text-center left-1/2 right-1/2">
+                  {product?.title}
+                </p>
               </div>
             </div>
           ))}

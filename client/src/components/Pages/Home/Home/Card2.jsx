@@ -10,7 +10,7 @@ const Products = [
     title: "Scented Candles | Mango Wood | Set of 3",
     brands: "Think Artly",
     ratings: "3",
-    price: "250",
+    price: "$ 250",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const Products = [
     title: "Scented Candles | Mango Wood | Set of 3",
     brands: "Think Artly",
     ratings: "3",
-    price: "250",
+    price: "$ 250",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const Products = [
     title: "Scented Candles | Mango Wood | Set of 3",
     brands: "Think Artly",
     ratings: "3",
-    price: "250",
+    price: "$ 250",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const Products = [
     title: "Scented Candles | Mango Wood | Set of 3",
     brands: "Think Artly",
     ratings: "3",
-    price: "250",
+    price: "$ 250",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const Products = [
     title: "Scented Candles | Mango Wood | Set of 3",
     brands: "Think Artly",
     ratings: "3",
-    price: "250",
+    price: "$ 250",
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const Products = [
     title: "Scented Candles | Mango Wood | Set of 3",
     brands: "Think Artly",
     ratings: "3",
-    price: "250",
+    price: "$ 250",
   },
 ];
 
@@ -77,10 +77,10 @@ const Card2 = ({ title, description, btnContent }) => {
     slides: { perView: 1 },
   });
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-4 container my-10 bg-[#E3F0F7] rounded-lg ]">
+    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-4 container my-16 bg-[#E3F0F7] rounded-lg ]">
       {" "}
       <div className="col-span-1">
-        <h2 className="my-2">{title}</h2>
+        <h2 className="my-2 font-semibold">{title}</h2>
         <p className="my-2">{description}</p>
         <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1 text-xs lg:text-sx md:text-sm bg-mongoose text-[white] rounded-lg capitalize">
           {btnContent}
@@ -90,7 +90,7 @@ const Card2 = ({ title, description, btnContent }) => {
         <div ref={sliderRef} className="keen-slider">
           {Products.map((data) => (
             <div className="keen-slider__slide rounded-xl">
-              <div className="card  bg-base-100 shadow-xl">
+              <div className="card bg-base-100">
                 <figure className="w-100 p-3 ">
                   <img src={data?.img} alt="Shoes" className="rounded-xl" />
                 </figure>
@@ -116,7 +116,6 @@ const Card2 = ({ title, description, btnContent }) => {
               }
               disabled={currentSlide === 0}
             />
-
             <Arrow
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.next()

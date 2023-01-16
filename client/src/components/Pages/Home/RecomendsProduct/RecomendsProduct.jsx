@@ -78,13 +78,13 @@ const RecomendsProduct = () => {
     slides: { perView: 1 },
   });
   return (
-    <div className="container mx-auto bg-[#2297be23] relative ">
-      <HomeTitle title="Amala Earth Recommends" />
+    <div className="container mx-auto bg-[#2297be23] relative rounded-lg ">
+      <HomeTitle title="Liya Baby Shop Earth Recommends" />
 
       <div ref={sliderRef} className="keen-slider">
         {RecommendsProduct.map((data) => (
           <div className="keen-slider__slide ">
-            <div className="card  bg-base-100 shadow-xl">
+            <div className="card  bg-base-100">
               <figure className="w-100 p-3 ">
                 <img src={data?.img} alt="Shoes" className="rounded-xl" />
               </figure>
