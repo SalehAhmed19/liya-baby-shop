@@ -1,39 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-
 const ProductsData = [
   {
     id: 1,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/category-images_fashion_320x.png?v=1670303153",
+    title: "title",
   },
   {
     id: 2,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/category-images_beauty_320x.png?v=1670303153",
+    title: "title",
   },
   {
     id: 3,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/category-images_baby_320x.png?v=1671600017",
+    title: "title",
   },
   {
     id: 4,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/kids_1_320x.png?v=1670417892",
+    title: "title",
   },
   {
     id: 5,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/category-images_weddings_320x.png?v=1670303153",
+    title: "title",
   },
   {
     id: 6,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/category-images-Offers_320x.png?v=1672034997",
+    title: "title",
   },
   {
     id: 7,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/food_c1f84a1f-b985-46ba-9399-8910cefaa24f_320x.png?v=1670417880",
+    title: "title",
   },
   {
     id: 8,
     img: "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/home_1_320x.png?v=1670478404",
+    title: "title",
   },
 ];
 const ProductsDataCategory = [
@@ -81,10 +88,20 @@ const ProductsDataCategory = [
 ];
 
 export const Products = () => {
-  const [sliderRef] = useKeenSlider({
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+
     breakpoints: {
       "(min-width: 400px)": {
-        slides: { perView: 3, spacing: 5 },
+        slides: { perView: 2, spacing: 10 },
       },
       "(min-width: 1000px)": {
         slides: { perView: 5, spacing: 10 },
@@ -98,12 +115,30 @@ export const Products = () => {
         <div ref={sliderRef} className="keen-slider">
           {ProductsData.map((product) => (
             <div className="keen-slider__slide ">
-              <div>
-                <img src={product.img} alt="" />
+              <div className="relative">
+                <img  src={product.img} alt="" />
+                <p className="-mt-10 absolute text-[white] font-bold">{product?.title}</p>
               </div>
             </div>
           ))}
         </div>
+        {loaded && instanceRef.current && (
+          <div className="dots">
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={"dot" + (currentSlide === idx ? " active" : "")}
+                ></button>
+              );
+            })}
+          </div>
+        )}
       </div>
       <div className="container mx-auto">
         <div ref={sliderRef} className="keen-slider">
@@ -116,6 +151,23 @@ export const Products = () => {
             </div>
           ))}
         </div>
+        {loaded && instanceRef.current && (
+          <div className="dots">
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={"dot" + (currentSlide === idx ? " active" : "")}
+                ></button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       <div className="container mx-auto"></div>
@@ -124,24 +176,3 @@ export const Products = () => {
 };
 
 export default Products;
-
-function Arrow(props) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
-  return (
-    <svg
-      onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
-      } ${disabeld}`}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      {props.left && (
-        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-      )}
-      {!props.left && (
-        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-      )}
-    </svg>
-  );
-}
