@@ -18,7 +18,9 @@ const Categories = () => {
   ];
   return (
     <div>
-      <h1 className="font-semibold text-center my-5">All Categories</h1>
+      <h1 className="font-semibold text-center my-5 text-primary">
+        All Categories
+      </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mx-10">
         {data.map((d) => (
           <Category key={d._id} d={d} />
