@@ -77,19 +77,19 @@ const Card2 = ({ title, description, btnContent }) => {
     slides: { perView: 1 },
   });
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-4  container ]">
+    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-4 container my-10 bg-[#E3F0F7] rounded-lg ]">
       {" "}
       <div className="col-span-1">
         <h2 className="my-2">{title}</h2>
         <p className="my-2">{description}</p>
-        <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
+        <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1 text-xs lg:text-sx md:text-sm bg-mongoose text-[white] rounded-lg capitalize">
           {btnContent}
         </button>
       </div>
       <div className="col-span-2 relative">
         <div ref={sliderRef} className="keen-slider">
           {Products.map((data) => (
-            <div className="keen-slider__slide border-naturalGray rounded-xl border">
+            <div className="keen-slider__slide rounded-xl">
               <div className="card  bg-base-100 shadow-xl">
                 <figure className="w-100 p-3 ">
                   <img src={data?.img} alt="Shoes" className="rounded-xl" />
