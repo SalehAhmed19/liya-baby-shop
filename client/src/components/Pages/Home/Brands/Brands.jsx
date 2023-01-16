@@ -9,7 +9,7 @@ import "./style.css";
 const Brands = () => {
   
   return (
-    <div>
+    <div className="container">
       <HomeTitle title="brands we love" />
       
     </div>
