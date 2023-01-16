@@ -143,7 +143,7 @@ export const Products = () => {
         )}
       </div>
       <div className="container mx-auto">
-        <div ref={sliderRef} className="keen-slider">
+        {/* <div ref={sliderRef} className="keen-slider">
           {ProductsDataCategory.map((product) => (
             <div className="keen-slider__slide ">
               <div>
@@ -152,8 +152,8 @@ export const Products = () => {
               </div>
             </div>
           ))}
-        </div>
-        {loaded && instanceRef.current && (
+        </div> */}
+        {/* {loaded && instanceRef.current && (
           <div className="dots">
             {[
               ...Array(instanceRef.current.track.details.slides.length).keys(),
@@ -169,7 +169,7 @@ export const Products = () => {
               );
             })}
           </div>
-        )}
+        )} */}
       </div>
 
       <div className="container mx-auto"></div>
