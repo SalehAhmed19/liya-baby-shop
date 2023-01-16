@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="container">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-6">
-        <div className="bg-[#E2F0F7] px-24 rounded-3xl py-6">
+        <div className="bg-[#E2F0F7] px-24 rounded-3xl py-6 flex items-center">
           {" "}
           <img src={brand} alt="" />
         </div>
