@@ -2,19 +2,21 @@ import React from "react";
 import Category from "./Category";
 import babyboy from "../../../Assets/categories/babyboy.jpg";
 import babygirl from "../../../Assets/categories/babygirl.jpg";
-import other from "../../../Assets/categories/other.jpg";
-import pajamas from "../../../Assets/categories/pajamas.jpg";
-import shoes from "../../../Assets/categories/shoes.jpg";
+import diapar from "../../../Assets/categories/diapar.jpg";
 import toys from "../../../Assets/categories/toys.jpg";
+import man from "../../../Assets/categories/man.jpg";
+import woman from "../../../Assets/categories/woman.jpg";
+import offer from "../../../Assets/categories/offer.jpg";
 
 const Categories = () => {
   const data = [
-    { _id: 1, title: "Baby Boy", img: babyboy },
-    { _id: 2, title: "Baby Girl", img: babygirl },
-    { _id: 3, title: "Other", img: other },
-    { _id: 4, title: "Pajamas", img: pajamas },
-    { _id: 5, title: "Shoes", img: shoes },
-    { _id: 6, title: "Toys", img: toys },
+    { _id: 1, title: "Baby Diapers and Wipes", img: diapar },
+    { _id: 2, title: "New Born Essentials", img: toys },
+    { _id: 3, title: "Baby Dress ( Girl)", img: babygirl },
+    { _id: 4, title: "Baby Dress ( Boy )", img: babyboy },
+    { _id: 5, title: "Women Dress", img: woman },
+    { _id: 6, title: "Man Clothing", img: man },
+    { _id: 7, title: "Offer items", img: offer },
   ];
   return (
     <div>
