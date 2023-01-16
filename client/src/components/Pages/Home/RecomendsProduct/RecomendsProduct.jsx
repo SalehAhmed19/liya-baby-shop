@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HomeTitle from "../Home/HomeTitle";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./RecomendProduct.module.css";
@@ -138,7 +138,15 @@ const RecomendsProduct = () => {
 
                 <div className="flex items-center justify-center">
                   <span className="lg:text-3xl text-xl lg:mr-4 mr-3">
-                    <AiOutlineHeart />
+                    <label className="swap">
+                      <input type="checkbox" />
+                      <div className="swap-on">
+                        <AiFillHeart color="#2096BE" />
+                      </div>
+                      <div className="swap-off">
+                        <AiOutlineHeart />
+                      </div>
+                    </label>
                   </span>
                   <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
                     add to cart
