@@ -12,15 +12,20 @@ const Navbar = () => {
     <nav className="bg-[#E2F0F7]">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? <MdCancel /> : <AiOutlineMenu></AiOutlineMenu>}
           </div>
         </div>
         <ul className="md:flex hidden z-20 uppercase items-center gap-8 font-[Poppins]">
           <li>
-            <Link to="/" className="py-7 px-3 inline-block text-[#2096BE]">
-              Home
+            <Link
+              to="/categories"
+              className="py-7 px-3 inline-block text-[#2096BE]"
+            >
+              Categories
             </Link>
           </li>
           <NavLinks />
