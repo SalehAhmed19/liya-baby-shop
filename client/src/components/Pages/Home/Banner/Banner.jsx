@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
+import AnimatedText from "react-animated-text-content";
 import "keen-slider/keen-slider.min.css";
 import "../Brands/style.css";
 import img1 from "../../../../Assets/images/bannerImg-01.jpg";
@@ -63,12 +64,44 @@ const Banner = () => {
                   // objectFit: "contain",
                 }}
               >
-                <h1 className="font-bold text-[#fff] text-3xl lg:text-5xl mx-20 text-center">
+                <AnimatedText
+                  type="words" // animate words or chars
+                  animation={{
+                    x: "200px",
+                    y: "-20px",
+                    scale: 1.1,
+                    ease: "ease-in-out",
+                  }}
+                  animationType="lights"
+                  interval={0.06}
+                  duration={0.8}
+                  tag="p"
+                  className="animated-paragraph font-bold text-[#fff] text-3xl lg:text-5xl mx-20 text-center"
+                  includeWhiteSpaces
+                  threshold={0.1}
+                  rootMargin="20%"
+                >
                   Liya Baby Shop
-                </h1>
-                <p className="text-center text-[#fff] font-semibold my-5 text-xl">
+                </AnimatedText>
+                <AnimatedText
+                  type="words" // animate words or chars
+                  animation={{
+                    x: "200px",
+                    y: "-20px",
+                    scale: 1.1,
+                    ease: "ease-in-out",
+                  }}
+                  animationType="wave"
+                  interval={0.06}
+                  duration={0.8}
+                  tag="p"
+                  className="animated-paragraph text-center text-[#fff] font-semibold my-5 text-xl"
+                  includeWhiteSpaces
+                  threshold={0.1}
+                  rootMargin="20%"
+                >
                   {data.content}
-                </p>
+                </AnimatedText>
               </div>
             </>
           ))}

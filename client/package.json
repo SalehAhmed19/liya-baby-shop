@@ -9,6 +9,7 @@
     "daisyui": "^2.46.1",
     "keen-slider": "^6.8.5",
     "react": "^18.2.0",
+    "react-animated-text-content": "^1.0.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.1",
