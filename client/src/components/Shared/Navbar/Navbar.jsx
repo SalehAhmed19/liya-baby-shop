@@ -9,7 +9,7 @@ import { BsCartCheck, BsHeart } from "react-icons/bs";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-mongoose">
+    <nav className="bg-[#E2F0F7]">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
           <img src={logo} alt="" />
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <ul className="md:flex hidden z-20 uppercase items-center gap-8 font-[Poppins]">
           <li>
-            <Link to="/" className="py-7 px-3 inline-block text-[white]">
+            <Link to="/" className="py-7 px-3 inline-block text-[#2096BE]">
               Home
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 placeholder="Search…"
                 className="input input-bordered"
               />
-              <button className="btn btn-secondary">
+              <button className="btn btn-primary text-[#fff]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -52,13 +52,13 @@ const Navbar = () => {
           </div>
 
           <div className="">
-            <ul className="flex justify-between text-[white] px-3">
+            <ul className="flex justify-between text-[#2096BE] px-3">
               <Link to="/login" className="lg:ml-8">
                 Login
               </Link>
               <Link to="/login" className="lg:ml-8">
                 <div className="indicator">
-                  <span className="indicator-item badge badge-secondary">
+                  <span className="indicator-item badge badge-primary text-[#fff]">
                     8
                   </span>
                   <div className="grid   place-items-center">
@@ -68,7 +68,7 @@ const Navbar = () => {
               </Link>
               <Link to="/login" className="lg:ml-8">
                 <div className="indicator">
-                  <span className="indicator-item badge badge-secondary">
+                  <span className="indicator-item badge badge-primary text-[#fff]">
                     8
                   </span>
                   <div className="grid   place-items-center">
@@ -94,7 +94,7 @@ const Navbar = () => {
           </li>
           <NavLinks />
           <div>
-            <ul className="  lg:text-[white] px-3">
+            <ul className="  lg:text-[#2096BE] px-3">
               <Link to="/login" className="ml-4">
                 Login/Sign Up
               </Link>
