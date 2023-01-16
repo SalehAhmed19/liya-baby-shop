@@ -7,12 +7,12 @@ const Login = () => {
   return (
     <div className="flex flex-col justify-center items-center my-10">
       {/* lg:w-1/2 lg:mx-auto mx-3  */}
-      <h2 className="lg:text-3xl text-2xl font-semibold text-center">
+      <h2 className="lg:text-3xl text-2xl font-semibold text-center text-[#2297BF]">
         Welcome to <br /> Liya baby Shop
       </h2>
       <h4 className="text-xl my-5 text-center">Login</h4>
       <div className="">
-        <div className=" ">
+        <div className="flex flex-col justify-center items-center">
           {/* w-80 lg:w-96 mx-auto */}
           <div className="form-control">
             <div className="input-group">
