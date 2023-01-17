@@ -190,6 +190,7 @@ const BabyDiaper = () => {
       <div className="btm-nav lg:hidden bg-[#fff] z-10">
         <FilterBtn filter={filter} />
         <SortingBtn sort={sort} />
+        {/* Comment */}
       </div>
     </div>
   );
