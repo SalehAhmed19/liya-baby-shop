@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./MyLinks";
-import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");

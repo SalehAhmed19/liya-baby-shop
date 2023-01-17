@@ -25,7 +25,7 @@ const Navbar = () => {
               to="/categories"
               className="py-7 px-3 inline-block text-[#2096BE]"
             >
-              Categories
+              <h3>Categories</h3>
             </Link>
           </li>
           <NavLinks />

@@ -34,10 +34,13 @@ const FilterBtn = ({ filter }) => {
                   <p>{f.filter}</p>
                 </div>
                 <div className="collapse-content">
-                  <p>
-                    tabIndex={0} attribute is necessary to make the div
-                    focusable
-                  </p>
+                  <ul>
+                    {f.subFilter.map((sf) => (
+                      <li className="my-3">
+                        <p className="text-sm">{sf.sub}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
