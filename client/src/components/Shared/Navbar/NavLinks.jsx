@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./MyLinks";
-import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
@@ -18,7 +17,7 @@ const NavLinks = () => {
               }}
             >
               {link.name}
-              <span className="text-xl md:hidden inline hover:text-red-300">
+              {/* <span className="text-xl md:hidden inline hover:text-red-300">
                 {heading === link.name ? (
                   <span>
                     <RiArrowDropUpLine />
@@ -26,23 +25,23 @@ const NavLinks = () => {
                 ) : (
                   <RiArrowDropDownLine />
                 )}
-              </span>
-              <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2 duration-300">
+              </span> */}
+              {/* <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2 duration-300">
                 <span>
                   <RiArrowDropDownLine />
                 </span>
-              </span>
+              </span> */}
             </h3>
             {link.submenu && (
               <div>
                 <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
                   <div className="py-3">
-                    <div
+                    {/* <div
                       className="w-4 h-4 left-3 absolute 
                     mt-1 bg-softPeach rotate-45"
-                    ></div>
+                    ></div> */}
                   </div>
-                  <div className="bg-softPeach p-5 grid grid-cols-3 gap-10 ">
+                  {/* <div className="bg-softPeach p-5 grid grid-cols-3 gap-10 ">
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h3 className="text-lg font-semibold text-mongoose">
@@ -60,7 +59,7 @@ const NavLinks = () => {
                         ))}
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             )}
@@ -71,7 +70,7 @@ const NavLinks = () => {
             ${heading === link.name ? "md:hidden" : "hidden"}
           `}
           >
-            {/* sublinks */}
+            {/* sublinks
             {link.sublinks.map((slinks) => (
               <div>
                 <div>
@@ -106,7 +105,7 @@ const NavLinks = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       ))}
