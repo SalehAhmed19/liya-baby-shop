@@ -65,7 +65,9 @@ const Footer = () => {
       </footer>
       <h5 className="pb-20 lg:pb-10 ml-10">
         Developed by <br />{" "}
-        <span className="font-bold">MEHRAF All IT Solutions</span>
+        <span className="font-bold text-[#2297BF]">
+          MEHRAF All IT Solutions
+        </span>
       </h5>
     </div>
   );
