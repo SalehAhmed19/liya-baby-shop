@@ -1,5 +1,6 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
+import Magnifier from "react-magnifier";
 import "keen-slider/keen-slider.min.css";
 import dress1 from "../../../../Assets/dress/dress-1.webp";
 import dress2 from "../../../../Assets/dress/dress-2.webp";
@@ -70,7 +71,8 @@ const ProductImg = () => {
       <div ref={sliderRef} className="keen-slider">
         {img.map((i) => (
           <div className="keen-slider__slide flex justify-center items-center">
-            <img src={i.image} alt="" />
+            <Magnifier src={i.image} width={500} mgShape="square" />
+            {/* <img src={} alt="" /> */}
           </div>
         ))}
       </div>

@@ -6,7 +6,9 @@ import ProductImg from "./ProductImg";
 const ProductDetails = () => {
   return (
     <div>
+      <div style={{ width: "500px" }}></div>
       <h1 className="font-bold text-center my-10">Product Details</h1>
+      <div style={{ width: "342px" }}></div>
       <div className="grid grid-cols-1 lg:grid-cols-2 my-10">
         <div className="border border-base-200 p-10 m-5 rounded-lg">
           <ProductImg />
