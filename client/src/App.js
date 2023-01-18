@@ -13,6 +13,7 @@ import BabyDressBoy from "./components/Pages/Category/BabyDressBoy";
 import WomenDress from "./components/Pages/Category/WomenDress";
 import ManClothing from "./components/Pages/Category/ManClothing";
 import OfferItems from "./components/Pages/Category/OfferItems";
+import ProductDetails from "./components/Pages/Category/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               element={<NewBornEssentials />}
             />
             <Route path="/baby-girl-dress" element={<BabyDressGirl />} />
+            <Route path="/baby-diaper-1" element={<ProductDetails />} />
             <Route path="/baby-boy-dress" element={<BabyDressBoy />} />
             <Route path="/women-dress" element={<WomenDress />} />
             <Route path="/men-clothing" element={<ManClothing />} />

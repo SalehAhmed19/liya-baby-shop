@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 import { HiOutlineSortAscending } from "react-icons/hi";
@@ -25,6 +26,7 @@ const BabyDiaper = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
+      route: "/baby-diaper-1",
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ const BabyDiaper = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
+      route: "/baby-diaper-2",
     },
     {
       id: 3,
@@ -43,6 +46,7 @@ const BabyDiaper = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
+      route: "/baby-diaper-3",
     },
     {
       id: 4,
@@ -52,6 +56,7 @@ const BabyDiaper = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
+      route: "/baby-diaper-4",
     },
     {
       id: 5,
@@ -61,6 +66,7 @@ const BabyDiaper = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
+      route: "/baby-diaper-5",
     },
     {
       id: 6,
@@ -70,6 +76,7 @@ const BabyDiaper = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
+      route: "/baby-diaper-6",
     },
   ];
   const sort = [
