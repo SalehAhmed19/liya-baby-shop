@@ -30,7 +30,7 @@ const ProductInformation = () => {
             <label className="swap">
               <input type="checkbox" />
               <div className="swap-on flex items-center">
-                <AiFillHeart className="mr-3 text-xl text-primary" />
+                <AiFillHeart className="mr-3 lg:text-xl text-sm text-primary" />
                 <span className="text-sm lg:text-xl">In Wishlist</span>
               </div>
               <div className="swap-off flex items-center">
