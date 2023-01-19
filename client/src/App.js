@@ -14,6 +14,7 @@ import WomenDress from "./components/Pages/Category/WomenDress";
 import ManClothing from "./components/Pages/Category/ManClothing";
 import OfferItems from "./components/Pages/Category/OfferItems";
 import ProductDetails from "./components/Pages/Category/ProductDetails/ProductDetails";
+import Cart from "./components/Pages/Home/Cart/Cart";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/women-dress" element={<WomenDress />} />
             <Route path="/men-clothing" element={<ManClothing />} />
             <Route path="/offer-items" element={<OfferItems />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
           </Routes>
         </main>
