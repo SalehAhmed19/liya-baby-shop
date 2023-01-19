@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BiArrowToBottom } from "react-icons/bi";
 import { MdCancel } from "react-icons/md";
 import NavLinks from "./NavLinks";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -71,12 +70,12 @@ const Navbar = () => {
                   </div>
                 </div>
               </Link>
-              <Link to="/login" className="lg:ml-8">
+              <Link to="/cart" className="lg:ml-8">
                 <div className="indicator">
                   <span className="indicator-item badge badge-primary text-[#fff]">
                     8
                   </span>
-                  <div className="grid   place-items-center">
+                  <div className="grid place-items-center">
                     <BsCartCheck className="text-3xl" />
                   </div>
                 </div>
@@ -108,12 +107,12 @@ const Navbar = () => {
                   <span className="indicator-item badge badge-secondary">
                     8
                   </span>
-                  <div className="grid   place-items-center">
+                  <div className="grid place-items-center">
                     <BsCartCheck className="text-3xl" />
                   </div>
                 </div>
               </Link>
-              <Link to="/login" className="ml-4">
+              <Link to="/cart" className="ml-4">
                 <div className="indicator">
                   <span className="indicator-item badge badge-secondary">
                     8
