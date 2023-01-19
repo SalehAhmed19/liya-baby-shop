@@ -27,19 +27,17 @@ const ProductInformation = () => {
             </div>
           </div>
           <div className="my-5 flex items-center">
-            <div className="">
-              <label className="swap">
-                <input type="checkbox" />
-                <div className="swap-on flex items-center">
-                  <AiFillHeart className="mr-3 text-xl text-primary" /> In
-                  Wishlist
-                </div>
-                <div className="swap-off flex items-center">
-                  <AiOutlineHeart className="mr-3 lg:text-xl text-sm" />{" "}
-                  <span className="text-sm lg:text-xl">Add wishlist</span>
-                </div>
-              </label>
-            </div>
+            <label className="swap">
+              <input type="checkbox" />
+              <div className="swap-on flex items-center">
+                <AiFillHeart className="mr-3 text-xl text-primary" />
+                <span className="text-sm lg:text-xl">In Wishlist</span>
+              </div>
+              <div className="swap-off flex items-center">
+                <AiOutlineHeart className="mr-3 lg:text-xl text-sm" />{" "}
+                <span className="text-sm lg:text-xl">Add wishlist</span>
+              </div>
+            </label>
             <div className="divider divider-horizontal m-0"></div>
             <p className="cursor-pointer text-sm lg:text-xl">Remove</p>
           </div>
