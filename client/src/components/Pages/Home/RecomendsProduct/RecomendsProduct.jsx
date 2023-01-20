@@ -69,13 +69,6 @@ const RecommendsProduct = [
 ];
 
 const RecomendsProduct = () => {
-  const [babyGirlDress, setBabyGirlDress] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:4000/api/baby-girl-dress")
-      .then((res) => res.json())
-      .then((data) => setBabyGirlDress(data));
-  }, [babyGirlDress]);
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -97,6 +90,12 @@ const RecomendsProduct = () => {
     },
     slides: { perView: 1 },
   });
+  const [babyGirlDress, setBabyGirlDress] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/api/baby-girl-dress")
+      .then((res) => res.json())
+      .then((data) => setBabyGirlDress(data));
+  }, [babyGirlDress]);
   return (
     <div className="container mx-auto bg-[#2297be23] relative rounded-lg ">
       <HomeTitle title="Liya Baby Shop Earth Recommends" />
