@@ -10,6 +10,7 @@ import dress3 from "../../../../Assets/dress/dress-3.webp";
 import dress4 from "../../../../Assets/dress/dress-4.webp";
 import dress5 from "../../../../Assets/dress/dress-5.webp";
 import dress6 from "../../../../Assets/dress/dress-6.webp";
+import { useEffect } from "react";
 const RecommendsProduct = [
   {
     id: 1,
@@ -68,6 +69,13 @@ const RecommendsProduct = [
 ];
 
 const RecomendsProduct = () => {
+  const [babyGirlDress, setBabyGirlDress] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/api/baby-girl-dress")
+      .then((res) => res.json())
+      .then((data) => setBabyGirlDress(data));
+  }, [babyGirlDress]);
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -94,17 +102,17 @@ const RecomendsProduct = () => {
       <HomeTitle title="Liya Baby Shop Earth Recommends" />
 
       <div ref={sliderRef} className="keen-slider">
-        {RecommendsProduct.map((data) => (
+        {RecommendsProduct.map((bgd) => (
           <div className="keen-slider__slide ">
             <div className="card  bg-base-100">
               <figure className="w-100 p-3 ">
-                <img src={data?.img} alt="Shoes" className="rounded-xl" />
+                <img src={bgd?.img} alt="Shoes" className="rounded-xl" />
               </figure>
               <div className="card-body py-2 px-2 lg:px-4 lg:py-3">
                 <h2 className="text-xs lg:text-xl md:text-lg font-bold">
-                  {data?.title.slice(0, 30) + "..."}
+                  {bgd?.title.slice(0, 30) + "..."}
                 </h2>
-                <p className="text-xs lg:text-lg">{data?.brands}</p>
+                <p className="text-xs lg:text-lg">{bgd?.brands}</p>
                 <p className="">
                   <div className="rating">
                     <input
@@ -134,7 +142,7 @@ const RecomendsProduct = () => {
                     />
                   </div>
                 </p>
-                <p className="text-xs lg:text-xl md:text-lg">{data?.price}</p>
+                <p className="text-xs lg:text-xl md:text-lg">{bgd?.price}</p>
 
                 <div className="flex items-center justify-center">
                   <span className="lg:text-3xl text-xl lg:mr-4 mr-3">
