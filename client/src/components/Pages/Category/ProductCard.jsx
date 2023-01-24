@@ -57,9 +57,13 @@ const ProductCard = ({ data }) => {
                 </div>
               </label>
             </span>
-            <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
-              add to cart
-            </button>
+            <Link
+              to="/product-detail"
+            >
+              <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
+                add to cart
+              </button>
+            </Link>
           </div>
         </div>
       </div>

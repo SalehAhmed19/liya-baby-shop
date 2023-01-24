@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Category from "./Category";
 import babyboy from "../../../Assets/categories/babyboy.jpg";
 import babygirl from "../../../Assets/categories/babygirl.jpg";
@@ -15,38 +15,37 @@ const Categories = () => {
       _id: 1,
       title: "Baby Diapers and Wipes",
       img: diapar,
-      route: "/baby-diaper-wipes",
+      route: "baby-diaper-wipes",
     },
     {
       _id: 2,
       title: "New Born Essentials",
       img: toys,
-      route: "/new-born-essentials",
+      route: "new-born-essentials",
     },
     {
       _id: 3,
       title: "Baby Dress ( Girl)",
       img: babygirl,
-      route: "/baby-girl-dress",
+      route: "baby-girl-dress",
     },
     {
       _id: 4,
       title: "Baby Dress ( Boy )",
       img: babyboy,
-      route: "/baby-boy-dress",
+      route: "baby-boy-dress",
     },
-    { _id: 5, title: "Women Dress", img: woman, route: "/women-dress" },
-    { _id: 6, title: "Man Clothing", img: man, route: "/men-clothing" },
-    { _id: 7, title: "Offer items", img: offer, route: "/offer-items" },
+    { _id: 5, title: "Women Dress", img: woman, route: "women-dress" },
+    { _id: 6, title: "Man Clothing", img: man, route: "men-clothing" },
+    { _id: 7, title: "Offer items", img: offer, route: "offer-items" },
   ];
+
   return (
-    <div>
+    <div id="categories">
       <h1 className="font-semibold text-center my-5">All Categories</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mx-10">
         {data.map((d) => (
-          <Link to={d.route}>
-            <Category key={d._id} d={d} />
-          </Link>
+          <Category key={d._id} d={d} />
         ))}
       </div>
     </div>

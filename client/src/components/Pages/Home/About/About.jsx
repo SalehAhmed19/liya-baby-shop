@@ -5,7 +5,7 @@ import brand from "../../../../Assets/images/liya-baby-shop.png";
 
 const About = () => {
   return (
-    <div className="container">
+    <div id="about" className="container">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-6">
         <div className="bg-[#E2F0F7] px-24 rounded-3xl py-6 flex items-center">
           {" "}

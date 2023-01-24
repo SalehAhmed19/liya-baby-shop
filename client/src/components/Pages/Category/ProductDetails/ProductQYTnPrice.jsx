@@ -69,7 +69,7 @@ const ProductQYTnPrice = () => {
             Add to Cart
           </button>
           <button className="btn btn-primary btn-outline w-1/3 mx-2 text-[#fff]">
-            BY Now
+            BUY Now
           </button>
         </div>
       </div>

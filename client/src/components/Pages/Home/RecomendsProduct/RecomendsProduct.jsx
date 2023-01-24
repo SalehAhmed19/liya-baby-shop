@@ -11,6 +11,7 @@ import dress4 from "../../../../Assets/dress/dress-4.webp";
 import dress5 from "../../../../Assets/dress/dress-5.webp";
 import dress6 from "../../../../Assets/dress/dress-6.webp";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 const RecommendsProduct = [
   {
     id: 1,
@@ -98,7 +99,7 @@ const RecomendsProduct = () => {
     slides: { perView: 1 },
   });
   return (
-    <div className="container mx-auto bg-[#2297be23] relative rounded-lg ">
+    <div id="recommend" className="container mx-auto bg-[#2297be23] relative rounded-lg ">
       <HomeTitle title="Liya Baby Shop Earth Recommends" />
 
       <div ref={sliderRef} className="keen-slider">
@@ -156,9 +157,12 @@ const RecomendsProduct = () => {
                       </div>
                     </label>
                   </span>
-                  <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
-                    add to cart
-                  </button>
+                  <Link to={``}>
+                    {" "}
+                    <button className="border lg:py-2 md:px-3 md:py-1 px-2 py-1  text-xs lg:text-sx md:text-sm hover:bg-mongoose hover:text-[white] rounded-lg capitalize">
+                      add to cart
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { MdCancel } from "react-icons/md";
 import NavLinks from "./NavLinks";
 import { AiOutlineMenu } from "react-icons/ai";
 import logo from "../../../Assets/icon/Liya Baby Shop-3.png";
 import { BsCartCheck, BsHeart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -27,7 +28,28 @@ const Navbar = () => {
               <h3>Categories</h3>
             </Link>
           </li>
-          <NavLinks />
+          <li>
+            <a
+              href="#about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="py-7 px-3 inline-block text-[#2096BE]"
+            >
+              <h3>About</h3>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#recommend"
+             
+              className="py-7 px-3 inline-block text-[#2096BE]"
+            >
+              <h3>Categories</h3>
+            </a>
+          </li>
+
           {/* search bar */}
           <div className="form-control">
             <div className="input-group">
@@ -85,47 +107,6 @@ const Navbar = () => {
         </ul>
         <div className="md:block hidden">{/* <Button /> */}</div>
         {/* Mobile nav */}
-        <ul
-          className={`
-        md:hidden bg-[white] fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
-        duration-500 ${open ? "left-0" : "left-[-100%]"}
-         z-20`}
-        >
-          <li>
-            <Link to="/" className="py-7 px-3 inline-block text-[black]">
-              Home
-            </Link>
-          </li>
-          <NavLinks />
-          <div>
-            <ul className="  lg:text-[#2096BE] px-3">
-              <Link to="/login" className="ml-4">
-                Login/Sign Up
-              </Link>
-              <Link to="/login" className="ml-4">
-                <div className="indicator">
-                  <span className="indicator-item badge badge-secondary">
-                    8
-                  </span>
-                  <div className="grid place-items-center">
-                    <BsCartCheck className="text-3xl" />
-                  </div>
-                </div>
-              </Link>
-              <Link to="/cart" className="ml-4">
-                <div className="indicator">
-                  <span className="indicator-item badge badge-secondary">
-                    8
-                  </span>
-                  <div className="grid   place-items-center">
-                    <BsCartCheck className="text-3xl" />
-                  </div>
-                </div>
-              </Link>
-            </ul>
-          </div>
-          <div className="py-5">{/* <Button /> */}</div>
-        </ul>
       </div>
     </nav>
   );

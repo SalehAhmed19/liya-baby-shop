@@ -1,9 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { FiFilter } from "react-icons/fi";
-import { HiOutlineSortAscending } from "react-icons/hi";
-import { MdCancel } from "react-icons/md";
+import { useParams } from "react-router-dom";
 import dress1 from "../../../Assets/dress/dress-1.webp";
 import dress2 from "../../../Assets/dress/dress-2.webp";
 import dress3 from "../../../Assets/dress/dress-3.webp";
@@ -16,8 +12,7 @@ import ProductCard from "./ProductCard";
 import SortingBar from "./SortingBar";
 import SortingBtn from "./SortingBtn";
 
-const BabyDiaper = () => {
- 
+const SingleCategory = () => {
   const RecommendsProduct = [
     {
       id: 1,
@@ -180,28 +175,32 @@ const BabyDiaper = () => {
       ],
     },
   ];
+  const { id } = useParams();
+  console.log(id);
   return (
-    <div className="my-10">
-      <h1 className="my-5 text-center font-semibold">Baby Diaper</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-5">
-        <Filter filter={filter} />
-        <div className=" col-span-4">
-          {/* search result bar */}
-          <SortingBar sort={sort} />
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 my-10 mx-10">
-            {RecommendsProduct.map((data) => (
-              <ProductCard data={data} />
-            ))}
+    <div>
+      <div className="my-10">
+        <h1 className="my-5 text-center font-semibold">{id}</h1>
+        <div className="grid grid-cols-1 lg:grid-cols-5">
+          <Filter filter={filter} />
+          <div className=" col-span-4">
+            {/* search result bar */}
+            <SortingBar sort={sort} />
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 my-10 mx-10">
+              {RecommendsProduct.map((data) => (
+                <ProductCard data={data} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="btm-nav lg:hidden bg-[#fff] z-10">
-        <FilterBtn filter={filter} />
-        <SortingBtn sort={sort} />
-        {/* Comment */}
+        <div className="btm-nav lg:hidden bg-[#fff] z-10">
+          <FilterBtn filter={filter} />
+          <SortingBtn sort={sort} />
+          {/* Comment */}
+        </div>
       </div>
     </div>
   );
 };
 
-export default BabyDiaper;
+export default SingleCategory;

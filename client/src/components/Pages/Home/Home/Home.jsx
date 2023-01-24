@@ -11,7 +11,7 @@ import Card2 from "./Card2";
 
 const Home = () => {
   return (
-    <div>
+    <div id='home'>
       <Banner />
       <Products />
       <RecomendsProduct />

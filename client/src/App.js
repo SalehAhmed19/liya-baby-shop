@@ -15,6 +15,7 @@ import ManClothing from "./components/Pages/Category/ManClothing";
 import OfferItems from "./components/Pages/Category/OfferItems";
 import ProductDetails from "./components/Pages/Category/ProductDetails/ProductDetails";
 import Cart from "./components/Pages/Home/Cart/Cart";
+import SingleCategory from "./components/Pages/Category/SingleCategory";
 
 function App() {
   return (
@@ -27,17 +28,19 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/categories" element={<Category />}></Route>
-            <Route path="/baby-diaper-wipes" element={<BabyDiaper />} />
-            <Route
+            <Route path="categories/:id" element={<SingleCategory/>} />
+
+            {/* <Route
               path="/new-born-essentials"
               element={<NewBornEssentials />}
             />
-            <Route path="/baby-girl-dress" element={<BabyDressGirl />} />
-            <Route path="/baby-diaper-1" element={<ProductDetails />} />
-            <Route path="/baby-boy-dress" element={<BabyDressBoy />} />
-            <Route path="/women-dress" element={<WomenDress />} />
-            <Route path="/men-clothing" element={<ManClothing />} />
-            <Route path="/offer-items" element={<OfferItems />} />
+            <Route path="categories/:id" element={<BabyDressGirl />} />
+            <Route path="categories/:id" element={<ProductDetails />} />
+            <Route path="categories/:id" element={<BabyDressBoy />} />
+            <Route path="categories/:id" element={<WomenDress />} />
+            <Route path="categories/:id" element={<ManClothing />} />
+            <Route path="/offer-items" element={<OfferItems />} /> */}
+            <Route path="/product-detail" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
           </Routes>
