@@ -46,7 +46,7 @@ const Navbar = () => {
              
               className="py-7 px-3 inline-block text-[#2096BE]"
             >
-              <h3>Categories</h3>
+              <h3>Recommends</h3>
             </a>
           </li>
 
