@@ -3,6 +3,7 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
+  console.log(data)
   return (
     <Link to={data.route}>
       <div className="card bg-base-100 border border-base-200">

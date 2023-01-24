@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Category = ({ d }) => {
-  console.log(d)
   const navigate = useNavigate();
   const handleRoute = (id) => {
     console.log(id);

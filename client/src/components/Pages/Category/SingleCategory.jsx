@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import dress1 from "../../../Assets/dress/dress-1.webp";
 import dress2 from "../../../Assets/dress/dress-2.webp";
@@ -13,6 +15,8 @@ import SortingBar from "./SortingBar";
 import SortingBtn from "./SortingBtn";
 
 const SingleCategory = () => {
+  let arr = [];
+  const [productData, setProductData] = useState([]);
   const RecommendsProduct = [
     {
       id: 1,
@@ -22,7 +26,7 @@ const SingleCategory = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
-      route: "/baby-diaper-1",
+      route: "baby-diaper-wipes",
     },
     {
       id: 2,
@@ -32,7 +36,7 @@ const SingleCategory = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
-      route: "/baby-diaper-2",
+      route: "baby-diaper-wipes",
     },
     {
       id: 3,
@@ -42,7 +46,7 @@ const SingleCategory = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
-      route: "/baby-diaper-3",
+      route: "baby-diaper-wipes",
     },
     {
       id: 4,
@@ -52,7 +56,7 @@ const SingleCategory = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
-      route: "/baby-diaper-4",
+      route: "baby-diaper-4",
     },
     {
       id: 5,
@@ -62,7 +66,7 @@ const SingleCategory = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
-      route: "/baby-diaper-5",
+      route: "baby-diaper-5",
     },
     {
       id: 6,
@@ -72,7 +76,7 @@ const SingleCategory = () => {
       brands: "Think Artly",
       ratings: "3",
       price: "250",
-      route: "/baby-diaper-6",
+      route: "baby-diaper-6",
     },
   ];
   const sort = [
@@ -187,9 +191,21 @@ const SingleCategory = () => {
             {/* search result bar */}
             <SortingBar sort={sort} />
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 my-10 mx-10">
-              {RecommendsProduct.map((data) => (
+              {/* {RecommendsProduct.map((data) => (
                 <ProductCard data={data} />
-              ))}
+              ))} */}
+              {RecommendsProduct.map((data) => {
+                if (data.route === id) {
+                  arr.push(data);
+                  console.log(arr);
+                  arr.map((d) =>
+                    console.log(d)
+                    // <div>
+                    //   <p>{d.brands}</p>
+                    // </div>
+                  );
+                }
+              })}
             </div>
           </div>
         </div>
